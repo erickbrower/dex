@@ -1,10 +1,15 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead:
 gem 'rails'
 gem 'activerecord-jdbcpostgresql-adapter'
 gem 'jruby-openssl'
 gem 'jquery-rails'
+
+
+group :test do
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
