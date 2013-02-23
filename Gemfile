@@ -5,6 +5,9 @@ gem 'activerecord-jdbcpostgresql-adapter'
 gem 'jruby-openssl'
 gem 'jquery-rails'
 
+group :development, :test do
+  gem 'rspec-rails'
+end
 
 group :test do
   gem 'cucumber-rails'
