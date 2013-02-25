@@ -3,10 +3,11 @@ source 'https://rubygems.org'
 gem 'rails'
 gem 'activerecord-jdbcpostgresql-adapter'
 gem 'jruby-openssl'
-gem 'jquery-rails'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.12.2'
+  gem 'factory_girl'
 end
 
 group :test do
@@ -27,7 +28,6 @@ group :assets do
 end
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
