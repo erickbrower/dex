@@ -1,4 +1,8 @@
 Dex::Application.routes.draw do
+  get "main/index"
+
+  get "main/about"
+
   root :to => 'main#index'
   resources :entries
 
