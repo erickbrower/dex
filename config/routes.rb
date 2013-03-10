@@ -1,9 +1,7 @@
 Dex::Application.routes.draw do
-  get "main/index"
-
-  get "main/about"
 
   root :to => 'main#index'
+  match 'about' => 'main#about'
   resources :entries
 
   # The priority is based upon order of creation:
