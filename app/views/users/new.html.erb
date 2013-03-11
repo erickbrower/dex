@@ -1,0 +1,22 @@
+<% provide(:title, 'Create a new User') %>
+<h3>Create a new User</h3>
+<%= form_for(@user) do |f| %>
+<div class='row'>
+  <div class='large-12 columns'>
+    <%= f.text_field :email, :placeholder => 'Email Address' %>
+  </div>
+</div>
+<div class='row'>
+  <div class='large-6 columns'>
+    <%= f.password_field :password, :placeholder => 'Password' %>
+  </div>
+  <div class='large-6 columns'>
+    <%= f.password_field :password_confirmation, :placeholder => 'Confirm Password' %>
+  </div>
+</div>
+<div class='row'>
+  <div class='large-12 columns'>
+    <%= f.submit 'Create', class: 'button' %>
+  </div>
+</div>
+<% end %>
