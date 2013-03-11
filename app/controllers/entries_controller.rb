@@ -20,7 +20,6 @@ class EntriesController < ApplicationController
         render response
       end
     end
-    format.html { render }
   end
 
   def update

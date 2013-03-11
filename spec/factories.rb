@@ -12,6 +12,7 @@ FactoryGirl.define do
   end
 
   factory :entry do
+    sequence(:title) { |n| "Test Entry #{n}" }
     sequence(:content) do |n|
       if n % 2 == 0
         <<-eos
@@ -34,5 +35,6 @@ FactoryGirl.define do
         eos
       end
     end
+    etype 'markdown'
   end
 end

@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'yaml'
+require 'factories'
 
 describe EntriesController do
 
@@ -52,7 +52,14 @@ describe EntriesController do
 
       it 'should create a new Entry successfully' do
         entry = FactoryGirl.build(:entry)
-        data = { :format => 'json', :entry => { :content => entry.content } }
+        data = { 
+          :format => 'json', 
+          :entry => { 
+            :content => entry.content, 
+            :title => entry.title, 
+            :etype => entry.etype 
+          } 
+        }
         post :create, data
         response.code.should == '200'
         Entry.count.should == 51

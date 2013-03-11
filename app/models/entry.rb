@@ -1,5 +1,7 @@
 class Entry < ActiveRecord::Base
-  attr_accessible :content
+  attr_accessible :content, :title, :etype
 
-  validates_presence_of :content
+  validates :content, presence: true
+  validates :title, presence: true
+  validates :etype, presence: true
 end
