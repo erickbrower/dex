@@ -1,5 +1,7 @@
 Dex::Application.routes.draw do
 
+  get "sessions/new"
+
   root :to => 'main#index'
   match 'about' => 'main#about'
   resources :entries
