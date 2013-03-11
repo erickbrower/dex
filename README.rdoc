@@ -1,5 +1,7 @@
 == Dex
 
+![Dex Screenshot](http://i.imgur.com/Myn6UsJ.png)
+
 Dex is a simple way to blog with markdown and paste source code. Search for anything you've blogged or pasted
 using Postgres full-text search. Included fancy things:
 * Zurb Foundation 4
