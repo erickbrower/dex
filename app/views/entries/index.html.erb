@@ -2,7 +2,8 @@
 <table width='100%'>
   <thead>
     <tr>
-      <th>Content</th>
+      <th>Title</th>
+      <th>Type</th>
       <th>Date Created</th>
       <th>Options</th>
     </tr>
@@ -10,7 +11,8 @@
   <tbody>
     <% for entry in @entries %>
       <tr>
-        <td><%= entry.content[0...100] %></td>
+        <td><%= entry.title %></td>
+        <td><%= entry.etype %></td>
         <td><%= entry.created_at %></td>
         <td>
           <%= link_to 'delete', entry, method: :delete, confirm: 'You sure?' %>

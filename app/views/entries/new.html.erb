@@ -1,5 +1,13 @@
 <h3>Create a new Entry</h3>
 <%= form_for(@entry) do |f| %>
+<div class="row">
+  <div class="large-6 columns">
+    <%= f.text_field :title, :placeholder => 'Title' %>
+  </div>
+  <div class="large-6 columns">
+    <%= f.text_field :etype, :placeholder => 'Type' %>
+  </div>
+</div>
   <%= f.text_area :content, :placeholder => 'Paste or write some stuff!' %>
   <%= f.submit 'Publish', class: 'button' %>
 <% end %>
