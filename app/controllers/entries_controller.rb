@@ -3,6 +3,7 @@ class EntriesController < ApplicationController
     @entries = Entry.all
     respond_to do |format|
       format.json { render :json => { :resource => @entries } }
+      format.html { render }
     end
   end
 
@@ -19,6 +20,7 @@ class EntriesController < ApplicationController
         render response
       end
     end
+    format.html { render }
   end
 
   def update
@@ -44,6 +46,10 @@ class EntriesController < ApplicationController
   def edit
   end
 
+  def new
+    @entry = Entry.new
+  end
+
   def create
     @entry = Entry.new(params[:entry])
     success = @entry.save
@@ -54,10 +60,15 @@ class EntriesController < ApplicationController
         response[:status] = 400 unless success
         render response
       end
+      format.html do
+        if success
+          flash[:success] = 'The Entry was created successfully!'
+          redirect_to entries_path
+        else
+          render 'new'
+        end
+      end
     end
-  end
-
-  def new
   end
 
   def destroy

@@ -3,6 +3,9 @@
     <%= user.email %>
   </td>
   <td>
-    <%= link_to "delete", user, method: :delete, confirm: "You sure?" %>
+    <%= user.created_at %>
+  </td>
+  <td>
+    <%= link_to 'delete', user, method: :delete, confirm: 'You sure?' %>
   </td>
 </tr>

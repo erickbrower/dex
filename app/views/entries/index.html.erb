@@ -1,0 +1,21 @@
+<h3> Manage Entries </h3>
+<table width='100%'>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Date Created</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for entry in @entries %>
+      <tr>
+        <td><%= entry.content[1...100] %></td>
+        <td><%= entry.created_at %></td>
+        <td>
+          <%= link_to 'delete', entry, method: :delete, confirm: 'You sure?' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
