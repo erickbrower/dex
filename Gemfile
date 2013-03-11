@@ -4,6 +4,7 @@ gem 'rails', '3.2.12'
 gem 'bcrypt-ruby'
 gem 'pg'
 gem 'redcarpet'
+gem 'coderay'
 
 group :development, :test do
   gem 'rspec-rails'

@@ -5,4 +5,8 @@ module EntriesHelper
                                        :space_after_headers => true)
     markdown.render(content).html_safe
   end
+
+  def source_code_render(content, etype)
+    CodeRay.scan(content, etype).div
+  end
 end
