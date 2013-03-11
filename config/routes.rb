@@ -1,5 +1,11 @@
 Dex::Application.routes.draw do
 
+  get "users/index"
+
+  get "users/create"
+
+  get "users/edit"
+
   root :to => 'main#index'
   match 'about' => 'main#about'
   resources :entries
