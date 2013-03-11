@@ -1,2 +1,6 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h3>Dex Login</h3>
+<%= form_tag sessions_path do %>
+  <%= text_field_tag :email, params[:email], :placeholder => 'Email Address' %>
+  <%= password_field_tag :password, nil, :placeholder => 'Password' %>
+  <%= submit_tag 'Log in', :class => 'button radius' %>
+<% end%>
