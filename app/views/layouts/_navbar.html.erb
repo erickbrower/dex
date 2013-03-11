@@ -11,22 +11,22 @@
   </ul> 
   <section class="top-bar-section">
     <ul class="right">
-      <li class="divider"></li>
       <% if signed_in? %>
+        <li class="divider"></li>
         <li class='has-dropdown active'>
-        <%= link_to 'Entries', entries_path %>
-        <ul class='dropdown'>
-          <li><label>Manage Entries</label></li>
-          <li><%= link_to 'Create a New Entry', new_entry_path %></li>
-        </ul>
-      </li>
-      <li class='has-dropdown'>
-        <%= link_to 'Users', users_path %>
-        <ul class='dropdown'>
-          <li><label>Manage Users</label></li>
-          <li><%= link_to 'Create a New User', new_user_path %></li>
-        </ul>
-      </li>
+          <%= link_to 'Entries', entries_path %>
+          <ul class='dropdown'>
+            <li><label>Manage Entries</label></li>
+            <li><%= link_to 'Create a New Entry', new_entry_path %></li>
+          </ul>
+        </li>
+        <li class='has-dropdown'>
+          <%= link_to 'Users', users_path %>
+          <ul class='dropdown'>
+            <li><label>Manage Users</label></li>
+            <li><%= link_to 'Create a New User', new_user_path %></li>
+          </ul>
+        </li>
       <li><%= link_to 'Logout', logout_path %></li>
       <% else %>
       <li class="active"><%= link_to 'Entries', entries_path %></li>

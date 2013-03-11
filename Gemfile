@@ -5,6 +5,7 @@ gem 'bcrypt-ruby'
 gem 'pg'
 gem 'redcarpet'
 gem 'coderay'
+gem 'pg_search'
 
 group :development, :test do
   gem 'rspec-rails'

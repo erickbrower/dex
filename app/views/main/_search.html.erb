@@ -1,0 +1,15 @@
+<%= form_tag search_path do %>
+<div class="row">
+  <div class="large-9 columns">
+    <% if @search_terms %>
+      <%= text_field_tag :search_terms, @search_terms %>
+    <% else %>
+      <%= text_field_tag :search_terms, nil, :placeholder => 'Search!' %>
+    <% end %>
+  </div>
+  <div class="large-3 columns">
+    <%= submit_tag 'Search', :class => 'small button' %>
+  </div>
+</div>
+<% end %>
+<hr />

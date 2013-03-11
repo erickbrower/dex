@@ -4,11 +4,13 @@ Dex::Application.routes.draw do
 
   root :to => 'main#index'
   match 'about' => 'main#about'
+  match 'search' => 'main#search'
   resources :entries
   resources :users
   resources :sessions
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
