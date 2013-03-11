@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.12'
 gem 'bcrypt-ruby'
 gem 'pg'
+gem 'redcarpet'
 
 group :development, :test do
   gem 'rspec-rails'

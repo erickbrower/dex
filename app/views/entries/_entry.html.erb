@@ -3,7 +3,11 @@
 <h6><%= entry.etype.capitalize %> written by <a href='#'>cerickbrower@gmail.com</a> on <%= entry.created_at %></h6>
   <div class='row'>
     <div class='large-12 columns'>
-      <%= entry.content %>
+      <% if entry.etype.downcase == 'markdown' %>
+        <%= markdown_render(entry.content) %>
+      <% else %>
+        <%= entry.content %>
+      <% end %>
     </div>
   </div>
   <div class='row'>
