@@ -10,7 +10,7 @@
   <tbody>
     <% for entry in @entries %>
       <tr>
-        <td><%= entry.content[1...100] %></td>
+        <td><%= entry.content[0...100] %></td>
         <td><%= entry.created_at %></td>
         <td>
           <%= link_to 'delete', entry, method: :delete, confirm: 'You sure?' %>
